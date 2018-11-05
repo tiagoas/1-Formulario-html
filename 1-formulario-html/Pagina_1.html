@@ -1,0 +1,92 @@
+
+
+<html>
+   <head>
+   
+      <title> 1ª Avaliação de Programação para Internet </title>
+      <link rel="stylesheet" type = "text/css" href="novo.css">
+      <SCRIPT type="text/javascript"  language= "javascript">
+         function verif(){
+         
+           if(document.form_fpu.Nome.value == ""){
+             alert("preencha os dados");
+             return false;
+           }
+           if(document.form_fpu.Idade.value == ""){
+             alert("preencha os dados");
+             return false;
+           }
+         
+         if(!document.form_fpu.Sexo[0].checked && !document.form_fpu.Sexo[1].checked){
+             alert("preencha os dados");
+             return false;
+           }
+           if(!document.form_fpu.Faculdade[0].checked && !document.form_fpu.Faculdade[1].checked && !document.form_fpu.Faculdade[2].checked){ 
+             alert("preencha os dados");
+             return false;
+           }
+           if(document.form_fpu.Curriculo.value == ""){
+             alert("preencha os dados");
+             return false;
+           }
+           return true;
+         
+       }  
+      </SCRIPT>
+   </head>
+   <body background ="fundo.png">
+      <center>
+      <H1><font color="#01723C"> 1ª Avaliação de Programação para Internet</font></H1>
+      <br>
+      <table align="center" width="30%" border="0">
+         <form name="form_fpu" method="post" action="Pagina_2.html" onsubmit="return verif();">
+            <tr>
+               <td width="20%"><b>Nome:</b></td>
+               <td><input type="text" name="Nome" size="50"></td>
+            </tr>
+            <tr>
+               <td><b>Idade:</b></td>
+               <td><input type="number" name="Idade" ></td>
+            </tr>
+            <tr>
+               <td><b>Sexo:</b></td>
+               <td><input type="radio" name ="Sexo"  value="masculino">
+                  <input type="radio" name="Sexo"  value="feminino">
+               </td>
+            </tr>
+            <tr>
+               <td><b>Faculdade:</b></td>
+               <td><input type="checkbox" name="Faculdade" value="fpu">FPU
+                  <input type="checkbox" name="Faculdade" value="ufu">UFU
+                  <input type="checkbox" name="Faculdade" value="outros">Outros
+               </td>
+            </tr>
+            <tr>
+               <td><b>Curso:</b></td>
+               <td>
+                  <select name="Curso">
+                  <option value="0">
+                  <option value="1">Análise e Desenvolvimento de Sistemas
+                  <option value="2">Sistemas de Informação
+                  <option value="3">Engenharias
+                  <option value="4">Administração
+                  <option value="5">Direito
+                  <option value="6">Outros
+                  </select>
+               </td>
+            </tr>
+            <tr>
+               <td>  <b>Curriculo:</b></td>
+               <td><textarea name="Curriculo" cols="60" rows="3"></textarea></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><input type="submit" value="Ir Pagina 2">
+                  <input type="reset" value="Limpa">
+               </td>
+            </tr>
+         </form>
+      </table>
+   </body>
+</html>
+
